@@ -12,7 +12,7 @@ public interface RoundTableMapper {
     /**
      * 查询最新圆桌
      */
-    @Select("SELECT * FROM t_round_table ORDER BY id LIMIT 0,4 ")
+    @Select("SELECT * FROM t_round_table ORDER BY RAND(id) LIMIT 4 ")
     List<RoundTable> selectRecent();
 
     /**

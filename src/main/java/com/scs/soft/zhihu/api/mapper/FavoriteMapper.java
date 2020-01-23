@@ -6,7 +6,7 @@ import org.apache.ibatis.annotations.Select;
 import java.util.List;
 
 public interface FavoriteMapper {
-@Select("SELECT * FROM t_favorite ORDER BY id LIMIT 0,4 ")
+@Select("SELECT * FROM t_favorite ORDER BY RAND(id) LIMIT 4 ")
     List<Favorite> selectRecent();
 @Select("SELECT * FROM t_favorite")
     List<Favorite> selectAll();
